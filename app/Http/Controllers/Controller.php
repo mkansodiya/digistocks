@@ -9,4 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    function view($content="no data"){
+        
+        return view('base',['content'=>$content]);
+    }
 }
