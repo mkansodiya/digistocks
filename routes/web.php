@@ -19,3 +19,6 @@ Route::controller(Home::class)->group(function(){
 });
 
 Route::get('product/{id}',[Product::class,'product_single'])->name('product.single');
+
+Route::get('add_to_cart',[Product::class,'add_to_cart'])->name('product.add_to_cart');
+Route::get('cart',[Product::class,'cart_page'])->name('user.cart');
