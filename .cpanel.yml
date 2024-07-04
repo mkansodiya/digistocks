@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/w3winmsu/public_html
+    - /bin/cp -R . $DEPLOYPATH
+    - /bin/chown -R w3winmsu:w3winmsu $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} +
+    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} +
